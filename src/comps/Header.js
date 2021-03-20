@@ -7,7 +7,7 @@ import { LogoRound } from './LogoRound';
 const HeaderContainer = styled.div`
 
 width: 100vw; 
-height: 75px;
+height: 100px;
 position: fixed;
 top: 0;
 background: ${colors.green};
@@ -24,7 +24,6 @@ const HeaderLinkContainer = styled.div`
 width: 80vw;
 display: flex;
 justify-content: flex-end;
-
 
 
 `

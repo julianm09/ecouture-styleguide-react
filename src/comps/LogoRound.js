@@ -1,27 +1,42 @@
 import styled from 'styled-components';
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react';
+import './LogoRound.css';
 
 
 
 export const LogoRound = () => {
 
 
+    const [logoPosition, setLogoPosition] = useState('hero');
+    const [logoPositionInner, setLogoPositionInner] = useState('hero-round');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            setLogoPosition('corner')
+            setLogoPositionInner('corner-round')
+        } else {
+            setLogoPosition('hero')
+            setLogoPositionInner('hero-round')
+
+        }
+    })
+
+    
+
+
     return (
         <>
 
             <img
-            className="spin"
-            style={{
-                position: 'absolute',
-                width: '200px'
-            }}
+            className={logoPosition}
+
             src='/logo-round.svg'/>
-            <img             
-            style={{
-            position: 'absolute',
-            width: '100px'
-            }}
+            <img 
+            className={logoPositionInner}           
+    
             src='/earth.png'/>
+
+
 
         </>
         

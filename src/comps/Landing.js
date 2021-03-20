@@ -9,7 +9,7 @@ const Container = styled.div`
     height: 100vh;
     display: flex;
     align-items: center;
-    background: ${colors.green};
+    transition: 0.2s ease;
     justify-content: center;
 
 
@@ -18,14 +18,6 @@ const Container = styled.div`
 
 export const LandingPage = () => {
 
-
-
-
-
-
-
-
-    
 
 
 

@@ -1,0 +1,48 @@
+@keyframes spin {
+    0%{
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.hero{
+    position: absolute;
+    width: 200px;
+    transition: 0.2s ease;
+    animation: 10s spin linear infinite;
+}
+
+.hero-round{
+    position: absolute;
+    width: 100px;
+    transition: 0.2s ease;
+}
+
+
+
+.corner{
+    position: fixed;
+    width: 80px;
+    top: 10px;
+    left: 10vw;
+    animation: 10s spin linear infinite;
+    transition: 0.2s ease;
+   
+}
+
+.corner-round{
+    position: fixed;
+    width: 40px;
+    top: 27px;
+    left: calc(10vw + 20px);
+    transition: 0.2s ease;
+   
+}
+
+
+
+
+
