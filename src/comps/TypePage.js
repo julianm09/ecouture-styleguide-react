@@ -21,9 +21,11 @@ const Content = styled.div`
     height: 100vh;
     display: flex;
     align-items: left;
-    justify-content: left;
+    justify-content: center;
     font-family: nunito, sans-serif;
     padding: 200px 0 0 0;
+    position: relative;
+
 
 
 `
@@ -31,9 +33,13 @@ const Content = styled.div`
 const Title = styled.div`
 
     font-family: nunito, sans-serif;
+    font-size: 24px;
     font-weight: 700;
     color: ${colors.blue};
-    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: 200px;
+    
 
 
 `

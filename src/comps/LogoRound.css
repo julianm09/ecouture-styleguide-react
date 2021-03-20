@@ -30,6 +30,7 @@
     left: 10vw;
     animation: 10s spin linear infinite;
     transition: 0.2s ease;
+    z-index: 400;
    
 }
 
@@ -39,6 +40,7 @@
     top: 27px;
     left: calc(10vw + 20px);
     transition: 0.2s ease;
+    z-index: 400;
    
 }
 
