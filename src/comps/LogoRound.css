@@ -37,7 +37,7 @@
 .corner-round{
     position: fixed;
     width: 40px;
-    top: 27px;
+    top: 30px;
     left: calc(10vw + 20px);
     transition: 0.2s ease;
     z-index: 400;

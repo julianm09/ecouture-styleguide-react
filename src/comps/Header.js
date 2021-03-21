@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from './Colors';
+import { device } from './Sizes';
 import { LogoRound } from './LogoRound';
 
 
