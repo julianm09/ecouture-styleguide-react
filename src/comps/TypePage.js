@@ -52,7 +52,7 @@ export const TypePage = () => {
 
     return (
 
-        <Container>
+        <Container id="type">
 
             <Content>
             <Title>

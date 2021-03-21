@@ -56,10 +56,10 @@ export const FigmaPage = () => {
 
             <Content>
             <Title>
-                Figma
+            Prototype
             </Title>
 
-            <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)', position: 'absolute', top: '300px'}} width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FEUsyyUMGSooRcBsPrfJxej%2FDesign-Dynamic-Content%3Fnode-id%3D354%253A37" allowfullscreen></iframe>
+            <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)', position: 'absolute', top: '300px', width: '80vw', height: '60vh'}}  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FEUsyyUMGSooRcBsPrfJxej%2FDesign-Dynamic-Content%3Fnode-id%3D354%253A37" allowfullscreen></iframe>
 
 
 

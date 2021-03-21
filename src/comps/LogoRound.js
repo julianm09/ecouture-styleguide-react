@@ -1,17 +1,14 @@
 import styled from 'styled-components';
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './LogoRound.css';
 
 
 
-export const LogoRound = () => {
+export const LogoRound = ({ logoPosition, logoPositionInner }) => {
 
 
-    const [logoPosition, setLogoPosition] = useState('hero');
-    const [logoPositionInner, setLogoPositionInner] = useState('hero-round');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+/*     window.addEventListener('scroll', () => {
+        if (window.scrollY > 50 || !mobileMenu) {
             setLogoPosition('corner')
             setLogoPositionInner('corner-round')
         } else {
@@ -19,14 +16,14 @@ export const LogoRound = () => {
             setLogoPositionInner('hero-round')
 
         }
-    })
+    }) */
 
     
 
 
     return (
         <>
-
+        <a href="#top"></a>
             <img
             className={logoPosition}
 

@@ -12,12 +12,13 @@ const Container = styled.div`
     align-items: center;
     transition: 0.2s ease;
     justify-content: center;
+    z-index: 300;
 
 
 `
 
 
-export const LandingPage = () => {
+export const LandingPage = ({mobileMenu, setMobilemenu, logoPosition, logoPositionInner}) => {
 
 
 
@@ -26,7 +27,7 @@ export const LandingPage = () => {
 
         <Container>
 
-            <LogoRound></LogoRound>
+            <LogoRound logoPosition={logoPosition} logoPositionInner={logoPositionInner} mobileMenu={mobileMenu} setMobilemenu={setMobilemenu}></LogoRound>
 
         </Container>
 

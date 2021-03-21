@@ -51,7 +51,7 @@ export const LogoPage = () => {
 
     return (
 
-        <Container>
+        <Container id="logo">
 
             <Content>
             <Title>

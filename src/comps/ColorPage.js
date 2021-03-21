@@ -52,7 +52,7 @@ export const ColorPage = () => {
 
     return (
 
-        <Container>
+        <Container id="colors">
 
             <Content>
             <Title>
