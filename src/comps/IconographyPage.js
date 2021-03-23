@@ -45,6 +45,32 @@ const Title = styled.div`
 
 `
 
+const Icon = styled.div`
+
+    height: 100px;
+    width: 100px;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 4px 2px rgba(0,0,0,0.4);
+    margin-left: 2vw;
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+`
+
+const BoxContainer = styled.div`
+
+    display: flex;
+    justify-content: space-out;
+    align-items: center;
+    flex-wrap: no-wrap;
+    
+
+`
 
 export const IconographyPage = () => {
 
@@ -59,7 +85,28 @@ export const IconographyPage = () => {
                 Iconography
             </Title>
 
+        <BoxContainer>
 
+        <Icon>
+        <img src='/cotton-btn.svg'></img>
+        </Icon>
+
+
+        <Icon>
+        <img src='/plant-btn.svg'></img>
+        </Icon>
+
+
+        <Icon>
+        <img src='/animal-btn.svg'></img>
+        </Icon>
+
+
+        <Icon>
+        <img src='/synthetic-btn.svg'></img>
+        </Icon>
+
+        </BoxContainer>
 
 
 

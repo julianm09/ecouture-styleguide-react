@@ -1,10 +1,11 @@
-import styled from 'styled-components';
-import { colors } from './Colors';
-import { device } from './Sizes';
-import { LogoRound } from './LogoRound';
-import React, { useState } from 'react';
+import styled from "styled-components";
+import { colors } from "./Colors";
+import { device } from "./Sizes";
+import { LogoRound } from "./LogoRound";
+import React, { useState } from "react";
 
 const Container = styled.div`
+
 
     width: 100vw;
     height: 100vh;
@@ -249,3 +250,4 @@ const [fontSize, setFontSize] = useState(font.sizes[0])
     )
 
 }
+
