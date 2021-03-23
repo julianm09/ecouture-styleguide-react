@@ -108,11 +108,21 @@ export const TypePage = () => {
           font-3
         </TabUI>
 
-        <FontUI onClick={() => setFontSize(font.sizes[0])}>
+        <FontUI
+        style={{
+          background: fontSize == font.sizes[0] ? 'white' : colors.green,
+          color: fontSize == font.sizes[0] ? colors.green : 'white'
+        }}
+         onClick={() => setFontSize(font.sizes[0])}>
           {font.sizes[0]}
         </FontUI>
 
-        <FontUI onClick={() => setFontSize(font.sizes[1])}>
+        <FontUI 
+        style={{
+          background: fontSize == font.sizes[1] ? 'white' : colors.green,
+          color: fontSize == font.sizes[1] ? colors.green : 'white'
+        }}
+        onClick={() => setFontSize(font.sizes[1])}>
           {font.sizes[1]}
         </FontUI>
 
