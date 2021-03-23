@@ -87,10 +87,24 @@ export const IconographyPage = () => {
 
         <BoxContainer>
 
-        <Icon></Icon>
-        <Icon></Icon>
-        <Icon></Icon>
-        <Icon></Icon>
+        <Icon>
+        <img src='/cotton-btn.svg'></img>
+        </Icon>
+
+
+        <Icon>
+        <img src='/plant-btn.svg'></img>
+        </Icon>
+
+
+        <Icon>
+        <img src='/animal-btn.svg'></img>
+        </Icon>
+
+
+        <Icon>
+        <img src='/synthetic-btn.svg'></img>
+        </Icon>
 
         </BoxContainer>
 
