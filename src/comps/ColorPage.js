@@ -36,7 +36,7 @@ const Title = styled.div`
     font-family: nunito, sans-serif;
     font-size: 24px;
     font-weight: 700;
-    color: ${colors.blue};
+    color: white;
     position: absolute;
     left: 0;
     top: 200px;
@@ -49,7 +49,7 @@ const ColorContainer = styled.div
 `
     height: 100vh;
     width: 100vw;
-    background-color: white;
+
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -61,9 +61,10 @@ const ColorBoxes = styled.div
     display: flex;
     width: 100%;
     height: 40%;
-    background-color: white;
+    background-color: none;
     justify-content: space-between;
     align-items: center;
+    
 
 `
 const ColorText = styled.div
@@ -71,7 +72,8 @@ const ColorText = styled.div
     display: flex;
     width: 100%;
     height: 50%;
-    background-color: white;
+    color: white;
+
 `
 
 const CyanBox = styled.div
@@ -135,31 +137,31 @@ const CyanTextBox = styled.div
 
 const PurpleTextBox = styled.div
 `
-    display: none;
+display: flex;
     flex-direction: column;
     justify-content: left;
 `
 const BlueTextBox = styled.div
 `
-    display: none;
+display: flex;
     flex-direction: column;
     justify-content: left;
 `
 const OrangeTextBox = styled.div
 `
-    display: none;
+display: flex;
     flex-direction: column;
     justify-content: left;
 `
 const BlackTextBox = styled.div
 `
-    display: none;
+display: flex;
     flex-direction: column;
     justify-content: left;
 `
 const GreenTextBox = styled.div
 `
-    display: none;
+display: flex;
     flex-direction: column;
     justify-content: left;
 `
@@ -183,10 +185,15 @@ const ColorDesc = styled.div
 
 export const ColorPage = () => {
 
+    const [color, setColor] = useState('cyan')
+
 
     return (
 
-        <Container id="colors">
+        <Container id="colors"
+        style={{
+            background: color
+        }}>
 
             <Content>
             <Title>
@@ -196,21 +203,30 @@ export const ColorPage = () => {
             
             <ColorContainer>
                 <ColorBoxes>
-                    <CyanBox></CyanBox>
-                    <PurpleBox></PurpleBox>
-                    <BlueBox></BlueBox>
-                    <OrangeBox></OrangeBox>
-                    <BlackBox></BlackBox>
-                    <GreenBox></GreenBox>
+                    <CyanBox onClick={() => setColor(colors.cyan)}></CyanBox>
+                    <PurpleBox onClick={() => setColor(colors.purple)}></PurpleBox>
+                    <BlueBox onClick={() => setColor(colors.blue)}></BlueBox>
+                    <OrangeBox onClick={() => setColor(colors.orange)}></OrangeBox>
+                    <BlackBox onClick={() => setColor(colors.black)}></BlackBox>
+                    <GreenBox onClick={() => setColor(colors.green)}></GreenBox>
                 </ColorBoxes>
 
                 <ColorText>
-                    <CyanTextBox>
-                        <ColorName>Synthetic Cyan</ColorName>
-                        <ColorHex>#36B9C5</ColorHex>
-                        <ColorRgb>(54, 185, 197)</ColorRgb>
-                        <ColorDesc>Synthetic Cyan will be used for Synthetic Polymer fabrics.</ColorDesc>
-                    </CyanTextBox>
+
+
+                { 
+                color == colors.green ?
+
+                    <GreenTextBox>
+                        <ColorName>Eco Green</ColorName>
+                        <ColorHex>#51B27E</ColorHex>
+                        <ColorRgb>(81, 178, 126)</ColorRgb>
+                        <ColorDesc>Eco Green is the main color in our logo, as well as the color for plant fibers.</ColorDesc>
+                    </GreenTextBox>
+
+
+
+                    : color == colors.purple ?
 
                     <PurpleTextBox>
                         <ColorName>Pastel Purple</ColorName>
@@ -219,12 +235,16 @@ export const ColorPage = () => {
                         <ColorDesc>Pastel Purple will be used for Natural Polymer fabrics.</ColorDesc>
                     </PurpleTextBox>
 
+                    : color == colors.blue?
+
                     <BlueTextBox>
                         <ColorName>Ocean Blue</ColorName>
                         <ColorHex>#3884FF</ColorHex>
                         <ColorRgb>(56, 132, 255)</ColorRgb>
                         <ColorDesc>Ocean Blue will be used for all navigation buttons.</ColorDesc>
                     </BlueTextBox>
+
+                    : color == colors.orange ?
 
                     <OrangeTextBox>
                         <ColorName>Scorched Orange</ColorName>
@@ -233,6 +253,8 @@ export const ColorPage = () => {
                         <ColorDesc>Scorched Orange will be used for Animal Fiber fabrics.</ColorDesc>
                     </OrangeTextBox>
 
+                    : color == colors.black ?
+
                     <BlackTextBox>
                         <ColorName>Almost Black</ColorName>
                         <ColorHex>#2E2E2E</ColorHex>
@@ -240,12 +262,16 @@ export const ColorPage = () => {
                         <ColorDesc>Almost Black will be used for descriptive text.</ColorDesc>
                     </BlackTextBox>
 
-                    <GreenTextBox>
-                        <ColorName>Eco Green</ColorName>
-                        <ColorHex>#51B27E</ColorHex>
-                        <ColorRgb>(81, 178, 126)</ColorRgb>
-                        <ColorDesc>Eco Green is the main color in our logo, as well as the color for plant fibers.</ColorDesc>
-                    </GreenTextBox>
+                    : 
+
+                    <CyanTextBox>
+                        <ColorName>Synthetic Cyan</ColorName>
+                        <ColorHex>#36B9C5</ColorHex>
+                        <ColorRgb>(54, 185, 197)</ColorRgb>
+                        <ColorDesc>Synthetic Cyan will be used for Synthetic Polymer fabrics.</ColorDesc>
+                    </CyanTextBox>
+
+                }
 
                     
                 </ColorText>
