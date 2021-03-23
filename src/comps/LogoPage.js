@@ -12,10 +12,7 @@ const Container = styled.div`
     align-items: center;
     transition: 0.2s ease;
     justify-content: center;
- 
-
-
-`
+`;
 
 const Content = styled.div`
 
@@ -25,12 +22,10 @@ const Content = styled.div`
     align-items: left;
     justify-content: center;
     font-family: nunito, sans-serif;
-    padding: 200px 0 0 0;
     position: relative;
- 
 
-    
-`
+    flex-direction: column;
+`;
 
 const Title = styled.div`
 
@@ -38,101 +33,168 @@ const Title = styled.div`
     font-size: 24px;
     font-weight: 700;
     color: ${colors.blue};
-    position: absolute;
-    left: 0;
-    top: 200px;
-    
 
+`;
 
-`
-const First = styled.div`
-    height: 20vh;
-    width: 70vw;
-    background-color: 
+const ContentContainer = styled.div`
 
-
-
-    
-    
-
-
-`
-
-const LogoType = styled.h3`
-    font-family: nunito, sans-serif;
-    font-size: 16px;
-    color: ${colors.blue};
-    position: absolute;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    top: 225px;
+    margin 50px 0;
+
+    @media ${device.tablet}{
+        flex-wrap: wrap;
+    }
+`;
+
+const InformationContainer = styled.div`
+
+    width: 50%;
+
+    @media ${device.tablet} {
+        width: 80vw;
+    }
+`;
+
+const LogoContainer = styled.div`
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+  @media ${device.tablet} {
+    width: 80vw;
+  }
+`;
+
+const LogoTitle = styled.div`
+
+    color: #3884FF;
+    font-size: 22px;
    
+`;
+
+const LogoParagraph = styled.div`
+
+    margin-top: 25px;
+    color: black;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
     
-    
+`;
 
+const ButtonContainer = styled.div`
 
-`
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
 
-const Info = styled.h4`
-    margin-top: 65px;
-    width: 40vw;
-    font-size: 11px;
-    font-family: open sans, sans-serif;
-    
+const ButtonUI = styled.div`
 
-    
-    
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    background: white;
+    margin: 0 25px;
+`;
 
+const ImageContainer = styled.div`
 
-`
-
-
-
-
-
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+`;
 
 export const LogoPage = () => {
 
+    const [logoOne, setLogoOne] = useState(false);
+    const [logoTwo, setLogoTwo] = useState(false);
+    const [logoThree, setLogoThree] = useState(false);
 
     return (
-
         <Container id="logo">
-
             <Content>
-                <Title>
-                    Logo
-                </Title>
+                <Title>Logo</Title>
 
-                <First>
-                    <LogoType>
-                        Wordmark
-                    </LogoType>
+                <ContentContainer>
+                    <InformationContainer>
+                        <LogoTitle>Wordmark</LogoTitle>
+                        <LogoParagraph>
+                            Our wordmark is comprised of two key elements. First the name “ecouture” spelt in all lower case letters in the sans serif font “Montserrat Alternates”. Second it features our earth icon in place of the “o” in “ecouture” The color version of the wordmark uses #51B27E.
+                            </LogoParagraph>
+                    </InformationContainer>
 
-                    <Info>
-                        Our wordmark is comprised of two key elements. First the name “ecouture” spelt in all lower case letters in the sans serif font “Montserrat Alternates”. Second it features our earth icon in place of the “o” in “ecouture” The color version of the wordmark uses #51B27E.
+                    <LogoContainer>
+                        <ImageContainer>
+                            {logoOne ? (
+                                <img width="250px" src="/wordmark-color.png"></img>
+                            ) : (
+                                <img width="250px" src="/wordmark-bw.png"></img>
+                            )}
+                        </ImageContainer>
 
-                    </Info>
+                        <ButtonContainer>
+                            <ButtonUI onClick={() => setLogoOne(true)} style={{ background: logoOne ? 'black' : 'green' }}></ButtonUI>
+                            <ButtonUI onClick={() => setLogoOne(false)} style={{ background: logoOne ? 'green' : 'black' }}></ButtonUI>
+                        </ButtonContainer>
+                    </LogoContainer>
+                </ContentContainer>
 
+                <ContentContainer>
+                    <InformationContainer>
+                        <LogoTitle>Combination Mark</LogoTitle>
+                        <LogoParagraph>
+                            Our combination mark repeats the ecouture name three times to form a circle similar to that of the recycling logo. This is done to express the value ecouture puts in “Reduce, Reuse, Recyle”. The ecouture name is spelt in all lowercase letters and uses the sans serif font “Montserrat Alternates”  In the center is the earth icon.
+                            </LogoParagraph>
+                    </InformationContainer>
 
+                    <LogoContainer>
+                        <ImageContainer>
+                            {logoTwo ? (
+                                <img width="150px" src="/combination-color.png"></img>
+                            ) : (
+                                <img width="150px" src="/combination-bw.png"></img>
+                            )}
+                        </ImageContainer>
 
-                </First>
+                        <ButtonContainer>
+                            <ButtonUI onClick={() => setLogoTwo(true)} style={{ background: logoOne ? 'black' : 'green' }}></ButtonUI>
+                            <ButtonUI onClick={() => setLogoOne(false)} style={{ background: logoOne ? 'green' : 'black' }}></ButtonUI>
+                        </ButtonContainer>
+                    </LogoContainer>
+                </ContentContainer>
 
+                <ContentContainer>
+                    <InformationContainer>
+                        <LogoTitle>Pictoral Mark</LogoTitle>
+                        <LogoParagraph>
+                            Our pictoral mark is the most simple of our logo variations. It consists of a single icon of the earth. The icon uses #1D498B for the water and #3D7E5C for the land to give contrast to the lighter greens and blues used throughout our styling.
+                            </LogoParagraph>
+                    </InformationContainer>
 
+                    <LogoContainer>
+                        <ImageContainer>
+                            {logoThree ? (
+                                <img width="125px" src="/earth.png"></img>
+                            ) : (
+                                <img width="125px" src="/earth.gif"></img>
+                            )}
+                        </ImageContainer>
 
-
-
-
-
-
-
-
+                        <ButtonContainer>
+                            <div onClick={() => setLogoThree(!logoThree)}>{logoThree ? "Spin!" : "Stop"}</div>
+                        </ButtonContainer>
+                    </LogoContainer>
+                </ContentContainer>
             </Content>
-
-
-
-
-        </Container >
-
-    )
-
-}
+        </Container>
+    );
+};
