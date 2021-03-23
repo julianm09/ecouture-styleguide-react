@@ -24,7 +24,6 @@ const Content = styled.div`
     align-items: left;
     justify-content: center;
     font-family: nunito, sans-serif;
-    padding: 200px 0 0 0;
     position: relative;
 
 
@@ -65,9 +64,13 @@ const Icon = styled.div`
 const BoxContainer = styled.div`
 
     display: flex;
-    justify-content: space-out;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: no-wrap;
+    width: 100vw;
+    position: relative;
+    bottom: -100px;
+ 
     
 
 `
@@ -89,28 +92,28 @@ export const IconographyPage = () => {
 
         <Icon>
         <img src='/cotton-btn.svg'></img>
+        <strong style={{color: "#36B9C5"}}>Cotton</strong>
         </Icon>
 
 
         <Icon>
         <img src='/plant-btn.svg'></img>
+        <strong style={{color: "#51B27E"}}>Plant</strong>
         </Icon>
 
 
         <Icon>
         <img src='/animal-btn.svg'></img>
+        <strong style={{color: "#E67C20"}}>Animal</strong>
         </Icon>
 
 
         <Icon>
         <img src='/synthetic-btn.svg'></img>
+        <strong style={{color: "#AF75BD"}}>Synthetic</strong>
         </Icon>
 
         </BoxContainer>
-
-
-
-
             </Content>
         </Container>
 
