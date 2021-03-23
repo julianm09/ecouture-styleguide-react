@@ -92,25 +92,25 @@ export const IconographyPage = () => {
 
         <Icon>
         <img src='/cotton-btn.svg'></img>
-        <strong style={{color: "#36B9C5"}}>Cotton</strong>
+        <strong style={{color: colors.cyan}}>Cotton</strong>
         </Icon>
 
 
         <Icon>
         <img src='/plant-btn.svg'></img>
-        <strong style={{color: "#51B27E"}}>Plant</strong>
+        <strong style={{color: colors.green}}>Plant</strong>
         </Icon>
 
 
         <Icon>
         <img src='/animal-btn.svg'></img>
-        <strong style={{color: "#E67C20"}}>Animal</strong>
+        <strong style={{color: colors.orange}}>Animal</strong>
         </Icon>
 
 
         <Icon>
         <img src='/synthetic-btn.svg'></img>
-        <strong style={{color: "#AF75BD"}}>Synthetic</strong>
+        <strong style={{color: colors.purple}}>Synthetic</strong>
         </Icon>
 
         </BoxContainer>
