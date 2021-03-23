@@ -203,7 +203,7 @@ export const ColorPage = () => {
             
             <ColorContainer>
                 <ColorBoxes>
-                    <CyanBox onClick={() => setColor(colors.cyan)}></CyanBox>
+                    <CyanBox style={{border: color == colors.cyan ? '1px solid white' : 'none'}} onClick={() => setColor(colors.cyan)}></CyanBox>
                     <PurpleBox onClick={() => setColor(colors.purple)}></PurpleBox>
                     <BlueBox onClick={() => setColor(colors.blue)}></BlueBox>
                     <OrangeBox onClick={() => setColor(colors.orange)}></OrangeBox>
