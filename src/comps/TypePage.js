@@ -96,6 +96,7 @@ const Sizebox1 = styled.div`
     display: flex;
     font-weight: bold;
     font-family: nunito, sans-serif;
+    border: 1px solid white;
 `
 
 const Sizebox2 = styled.div`
@@ -168,7 +169,7 @@ const fontOne = {
 
 const fontTwo = {
     key: 2,
-    title:'Nunito Sans',
+    title:'Nunito',
     title2:'bold',
     textsize1:'36px',
     textsize2:'24px',
@@ -202,22 +203,28 @@ const [fontSize, setFontSize] = useState(font.sizes[0])
                 </Title>
             </Content>
             <Tabs>
-            <SelectedTab onClick={() => setFont(fontOne)} style={{background: font.key == 1 ? colors.green : "white",
-            color: font.key == 1 ? "white" : colors.green}}>Montserrat Alternates</SelectedTab>
-            <UnselectedTab onClick={() => setFont(fontTwo)} style={{background: font.key == 2 ? colors.green : "white",
-            color: font.key == 2 ? "white" : colors.green}}>Nunito Sans</UnselectedTab>
-            <UnselectedTab onClick={() => setFont(fontThree)} style={{background: font.key == 3 ? colors.green : "white",
-            color: font.key == 3 ? "white" : colors.green}}>Open Sans</UnselectedTab>
+            <SelectedTab onClick={() => setFont(fontOne)} style={{
+            background: font.key == 1 ? colors.green : "white",
+            color: font.key == 1 ? "white" : colors.green}}>
+                Montserrat Alternates</SelectedTab>
+            <UnselectedTab onClick={() => setFont(fontTwo)} style={{
+            background: font.key == 2 ? colors.green : "white",
+            color: font.key == 2 ? "white" : colors.green}}>
+                Nunito</UnselectedTab>
+            <UnselectedTab onClick={() => setFont(fontThree)} style={{
+            background: font.key == 3 ? colors.green : "white",
+            color: font.key == 3 ? "white" : colors.green}}>
+                Open Sans</UnselectedTab>
             </Tabs>
             <Greenback>
                 <Lefttext>
-                    <Montfont>
+                    <Montfont style = {{fontFamily: font.key == 1 ? "'Montserrat Alternates', sans-serif" : font.key == 2 ? "'Nunito', sans-serif" : "'Open Sans', sans-serif"}}>
                         {font.title}
                     </Montfont>
-                    <Smalltext>
+                    <Smalltext style = {{fontFamily: font.key == 1 ? "'Montserrat Alternates', sans-serif" : font.key == 2 ? "'Nunito', sans-serif" : "'Open Sans', sans-serif"}}>
                         {font.title2}
                     </Smalltext>
-                    <Smallpara style = {{fontSize:fontSize}}>
+                    <Smallpara style = {{fontSize:fontSize, fontFamily: font.key == 1 ? "'Montserrat Alternates', sans-serif" : font.key == 2 ? "'Nunito', sans-serif" : "'Open Sans', sans-serif"}}>
                         {font.paragraph}
                         <Break></Break>
                         <Break></Break>
@@ -225,8 +232,14 @@ const [fontSize, setFontSize] = useState(font.sizes[0])
                     </Smallpara>
                 </Lefttext>
                 <Righttext>
-                    <Sizebox1 onClick={() => setFontSize(font.sizes[0])}>{font.textsize1}</Sizebox1>
-                    <Sizebox2 onClick={() => setFontSize(font.sizes[1])}>{font.textsize2}</Sizebox2>
+                    <Sizebox1 onClick={() => setFontSize(font.sizes[0])} style={{
+                    background: fontSize == font.sizes[0] ? colors.green : "white",
+                    color: fontSize == font.sizes[0] ? "white" : colors.green}}>
+                        {font.textsize1}</Sizebox1>
+                    <Sizebox2 onClick={() => setFontSize(font.sizes[1])} style={{
+                    background: fontSize == font.sizes[1] ? colors.green : "white",
+                    color: fontSize == font.sizes[1] ? "white" : colors.green}}>
+                        {font.textsize2}</Sizebox2>
                 </Righttext>
 
             </Greenback>
