@@ -12,6 +12,7 @@ const Container = styled.div`
     align-items: center;
     transition: 0.2s ease;
     justify-content: center;
+ 
 
 
 `
@@ -26,9 +27,9 @@ const Content = styled.div`
     font-family: nunito, sans-serif;
     padding: 200px 0 0 0;
     position: relative;
+ 
 
-
-
+    
 `
 
 const Title = styled.div`
@@ -44,6 +45,50 @@ const Title = styled.div`
 
 
 `
+const First = styled.div`
+    height: 20vh;
+    width: 70vw;
+    background-color: 
+
+
+
+    
+    
+
+
+`
+
+const LogoType = styled.h3`
+    font-family: nunito, sans-serif;
+    font-size: 16px;
+    color: ${colors.blue};
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 225px;
+   
+    
+    
+
+
+`
+
+const Info = styled.h4`
+    margin-top: 65px;
+    width: 40vw;
+    font-size: 11px;
+    font-family: open sans, sans-serif;
+    
+
+    
+    
+
+
+`
+
+
+
+
 
 
 export const LogoPage = () => {
@@ -54,9 +99,27 @@ export const LogoPage = () => {
         <Container id="logo">
 
             <Content>
-            <Title>
-                Logo
-            </Title>
+                <Title>
+                    Logo
+                </Title>
+
+                <First>
+                    <LogoType>
+                        Wordmark
+                    </LogoType>
+
+                    <Info>
+                        Our wordmark is comprised of two key elements. First the name “ecouture” spelt in all lower case letters in the sans serif font “Montserrat Alternates”. Second it features our earth icon in place of the “o” in “ecouture” The color version of the wordmark uses #51B27E.
+
+                    </Info>
+
+
+
+                </First>
+
+
+
+
 
 
 
@@ -65,10 +128,10 @@ export const LogoPage = () => {
 
             </Content>
 
-            
 
 
-        </Container>
+
+        </Container >
 
     )
 
