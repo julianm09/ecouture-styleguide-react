@@ -202,12 +202,14 @@ export const ColorPage = () => {
             
             <ColorContainer>
                 <ColorBoxes>
+
                     <CyanBox style={{border: color == colors.cyan ? '2px solid white': 'none'}} onClick={() => setColor(colors.cyan)}></CyanBox>
                     <PurpleBox style={{border: color == colors.purple ? '2px solid white': 'none'}} onClick={() => setColor(colors.purple)}></PurpleBox>
                     <BlueBox style={{border: color == colors.blue ? '2px solid white': 'none'}}  onClick={() => setColor(colors.blue)}></BlueBox>
                     <OrangeBox style={{border: color == colors.orange ? '2px solid white': 'none'}} onClick={() => setColor(colors.orange)}></OrangeBox>
                     <BlackBox style={{border: color == colors.black ? '2px solid white': 'none'}} onClick={() => setColor(colors.black)}></BlackBox>
                     <GreenBox style={{border: color == colors.green ? '2px solid white': 'none'}} onClick={() => setColor(colors.green)}></GreenBox>
+
                 </ColorBoxes>
 
                 <ColorText>

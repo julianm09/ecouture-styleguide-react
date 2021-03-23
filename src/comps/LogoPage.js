@@ -5,12 +5,14 @@ import { LogoRound } from "./LogoRound";
 import React, { useState } from "react";
 
 const Container = styled.div`
+
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   transition: 0.2s ease;
   justify-content: center;
+
 `;
 
 const Content = styled.div`
@@ -22,7 +24,9 @@ const Content = styled.div`
   font-family: nunito, sans-serif;
   position: relative;
 
+
   flex-direction: column;
+
 `;
 
 const Title = styled.div`
@@ -30,6 +34,48 @@ const Title = styled.div`
   font-size: 24px;
   font-weight: 700;
   color: ${colors.blue};
+`;
+
+
+
+const ContentContainer = styled.div`
+
+    width: 100%;
+    display: flex;
+    margin 50px 0;
+
+    @media ${device.tablet}{
+        flex-wrap: wrap;
+    }
+`;
+
+const InformationContainer = styled.div`
+
+    width: 50%;
+
+    @media ${device.tablet} {
+        width: 80vw;
+    }
+`;
+
+const LogoContainer = styled.div`
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+  @media ${device.tablet} {
+    width: 80vw;
+  }
+`;
+
+const LogoTitle = styled.div`
+
+    color: #3884FF;
+    font-size: 22px;
+   
 `;
 
 const ContentContainer = styled.div`
@@ -42,10 +88,47 @@ const ContentContainer = styled.div`
     @media ${device.tablet}{
         flex-wrap: wrap;
     }
+`
 
 
+const LogoParagraph = styled.div`
 
+
+    margin-top: 25px;
+    color: black;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    
 `;
+
+const ButtonContainer = styled.div`
+
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+const ButtonUI = styled.div`
+
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    background: white;
+    margin: 0 25px;
+`;
+
+const ImageContainer = styled.div`
+
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+`;
+
 
 const InformationContainer = styled.div`
   width: 50%;
@@ -208,4 +291,5 @@ const [logoThree, setLogoThree] = useState(false);
       </Content>
     </Container>
   );
+
 };
