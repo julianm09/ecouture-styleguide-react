@@ -12,6 +12,7 @@ const Container = styled.div`
     align-items: center;
     transition: 0.5s ease;
     justify-content: center;
+    margin-bottom: -100px;
 
 
 `
@@ -49,7 +50,6 @@ const ColorContainer = styled.div
 `
     height: 100vh;
     width: 100vw;
-
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -185,8 +185,7 @@ const ColorDesc = styled.div
 
 export const ColorPage = () => {
 
-    const [color, setColor] = useState('cyan')
-
+    const [color, setColor] = useState(colors.cyan)
 
     return (
 
@@ -203,12 +202,14 @@ export const ColorPage = () => {
             
             <ColorContainer>
                 <ColorBoxes>
-                    <CyanBox style={{border: color == colors.cyan ? '1px solid white' : 'none'}} onClick={() => setColor(colors.cyan)}></CyanBox>
-                    <PurpleBox onClick={() => setColor(colors.purple)}></PurpleBox>
-                    <BlueBox onClick={() => setColor(colors.blue)}></BlueBox>
-                    <OrangeBox onClick={() => setColor(colors.orange)}></OrangeBox>
-                    <BlackBox onClick={() => setColor(colors.black)}></BlackBox>
-                    <GreenBox onClick={() => setColor(colors.green)}></GreenBox>
+
+                    <CyanBox style={{border: color == colors.cyan ? '2px solid white': 'none'}} onClick={() => setColor(colors.cyan)}></CyanBox>
+                    <PurpleBox style={{border: color == colors.purple ? '2px solid white': 'none'}} onClick={() => setColor(colors.purple)}></PurpleBox>
+                    <BlueBox style={{border: color == colors.blue ? '2px solid white': 'none'}}  onClick={() => setColor(colors.blue)}></BlueBox>
+                    <OrangeBox style={{border: color == colors.orange ? '2px solid white': 'none'}} onClick={() => setColor(colors.orange)}></OrangeBox>
+                    <BlackBox style={{border: color == colors.black ? '2px solid white': 'none'}} onClick={() => setColor(colors.black)}></BlackBox>
+                    <GreenBox style={{border: color == colors.green ? '2px solid white': 'none'}} onClick={() => setColor(colors.green)}></GreenBox>
+
                 </ColorBoxes>
 
                 <ColorText>
