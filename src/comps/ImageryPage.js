@@ -82,10 +82,25 @@ export const ImageryPage = () => {
 
         <BoxContainer>
 
-        <Square></Square>
-        <Square></Square>
-        <Square></Square>
-        <Square></Square>
+        <Square>
+        <img src="../../public/earth.png"></img>
+        <img src="../../public/logo-round.svg"></img>
+        </Square>
+
+        <Square>
+        <img src="../../public/earth.png"></img>
+        <img src="../../public/logo-round.svg"></img>
+        </Square>
+
+        <Square>
+        <img src="../../public/earth.png"></img>
+        <img src="../../public/logo-round.svg"></img>
+        </Square>
+
+        <Square>
+        <img src="../../public/earth.png"></img>
+        <img src="../../public/logo-round.svg"></img>
+        </Square>
 
         </BoxContainer>
 
