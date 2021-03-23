@@ -50,8 +50,7 @@ const Title = styled.div`
 const Square = styled.img`
 
     background-color: #51B27E;
-    min-width: 400px;
-    min-height: 300px;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +69,7 @@ const BoxContainer = styled.div`
 
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 
