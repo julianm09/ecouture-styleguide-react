@@ -154,7 +154,7 @@ const UnselectedTab = styled.div `
 
 export const TypePage = () => {
 
-
+const [font, setFont] = useState(fontOne)
 
     return (
 
