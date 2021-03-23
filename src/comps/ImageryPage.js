@@ -45,6 +45,27 @@ const Title = styled.div`
 
 `
 
+const Square = styled.div`
+
+    background-color: #51B27E;
+    min-width: 400px;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+const BoxContainer = styled.div`
+
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+   
+`
 
 export const ImageryPage = () => {
 
@@ -59,8 +80,14 @@ export const ImageryPage = () => {
                 Imagery
             </Title>
 
+        <BoxContainer>
 
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
 
+        </BoxContainer>
 
 
 
