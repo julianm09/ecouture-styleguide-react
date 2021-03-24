@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 const Container = styled.div`
 
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     display: flex;
     align-items: center;
     transition: 0.5s ease;

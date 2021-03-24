@@ -24,7 +24,6 @@ const Content = styled.div`
     align-items: left;
     justify-content: center;
     font-family: nunito, sans-serif;
-    padding: 200px 0 0 0;
     position: relative;
 
 
@@ -45,6 +44,36 @@ const Title = styled.div`
 
 `
 
+const Icon = styled.div`
+
+    height: 100px;
+    width: 100px;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 4px 2px rgba(0,0,0,0.4);
+    margin-left: 2vw;
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+`
+
+const BoxContainer = styled.div`
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: no-wrap;
+    width: 100vw;
+    position: relative;
+    bottom: -100px;
+ 
+    
+
+`
 
 export const IconographyPage = () => {
 
@@ -59,11 +88,32 @@ export const IconographyPage = () => {
                 Iconography
             </Title>
 
+        <BoxContainer>
+
+        <Icon>
+        <img src='/cotton-btn.svg'></img>
+        <strong style={{color: colors.cyan}}>Cotton</strong>
+        </Icon>
 
 
+        <Icon>
+        <img src='/plant-btn.svg'></img>
+        <strong style={{color: colors.green}}>Plant</strong>
+        </Icon>
 
 
+        <Icon>
+        <img src='/animal-btn.svg'></img>
+        <strong style={{color: colors.orange}}>Animal</strong>
+        </Icon>
 
+
+        <Icon>
+        <img src='/synthetic-btn.svg'></img>
+        <strong style={{color: colors.purple}}>Synthetic</strong>
+        </Icon>
+
+        </BoxContainer>
             </Content>
         </Container>
 
