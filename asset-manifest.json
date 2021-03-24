@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ecouture-styleguide-react/static/css/main.91f502fb.chunk.css",
-    "main.js": "/ecouture-styleguide-react/static/js/main.c1f17c3a.chunk.js",
-    "main.js.map": "/ecouture-styleguide-react/static/js/main.c1f17c3a.chunk.js.map",
+    "main.js": "/ecouture-styleguide-react/static/js/main.25462091.chunk.js",
+    "main.js.map": "/ecouture-styleguide-react/static/js/main.25462091.chunk.js.map",
     "runtime-main.js": "/ecouture-styleguide-react/static/js/runtime-main.8c0db60e.js",
     "runtime-main.js.map": "/ecouture-styleguide-react/static/js/runtime-main.8c0db60e.js.map",
     "static/js/2.855d78e1.chunk.js": "/ecouture-styleguide-react/static/js/2.855d78e1.chunk.js",
@@ -29,6 +29,6 @@
     "static/js/runtime-main.8c0db60e.js",
     "static/js/2.855d78e1.chunk.js",
     "static/css/main.91f502fb.chunk.css",
-    "static/js/main.c1f17c3a.chunk.js"
+    "static/js/main.25462091.chunk.js"
   ]
 }
