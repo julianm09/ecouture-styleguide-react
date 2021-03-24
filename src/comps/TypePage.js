@@ -8,12 +8,13 @@ const Container = styled.div`
 
 
     width: 100vw;
-    height: 100vh;
     display: flex;
     align-items: center;
     transition: 0.2s ease;
     justify-content: center;
     flex-direction: column;
+
+ 
 
 
 `
@@ -21,12 +22,11 @@ const Container = styled.div`
 const Content = styled.div`
 
     width: 80vw;
-    height: 100vh;
+
     display: flex;
     align-items: left;
-    justify-content: center;
+    justify-content: left;
     font-family: nunito, sans-serif;
-    padding: 200px 0 0 0;
     position: relative;
 
 `
@@ -37,9 +37,9 @@ const Title = styled.div`
     font-size: 24px;
     font-weight: 700;
     color: ${colors.blue};
-    position: absolute;
-    left: 0;
-    top: 200px;
+    margin: 100px 0;
+
+
     
 `
 
@@ -47,11 +47,13 @@ const Greenback = styled.div`
 
     background-color: ${colors.green};
     width: 100%;
-    height: 300vh;
+    
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
+    padding: 100px 0 ;
+
 
 `
 
@@ -81,11 +83,11 @@ const Smallpara = styled.div`
 
 const Lefttext = styled.div`
 
-    margin-right: 400px
+  
     
 `
 
-const Sizebox1 = styled.div`
+const Sizebox = styled.div`
 
     background-color: white;
     color: ${colors.green};
@@ -98,22 +100,10 @@ const Sizebox1 = styled.div`
     font-weight: bold;
     font-family: nunito, sans-serif;
     border: 1px solid white;
+    cursor: pointer;
 `
 
-const Sizebox2 = styled.div`
 
-    background-color: ${colors.green};
-    border: 1px solid white;
-    color: white;
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-weight: bold;
-    font-family: nunito, sans-serif;
-`
 
 const Righttext = styled.div`
 `
@@ -122,7 +112,9 @@ const Break = styled.br`
 `
 
 const Tabs = styled.div `
-    display: flex
+    display: flex;
+    width: 80vw;
+    
 `
 
 const SelectedTab = styled.div`
@@ -132,11 +124,21 @@ const SelectedTab = styled.div`
     background-color: ${colors.green};
     border: 1px ${colors.green} solid;
     height: 60px;
-    width: 300px;
+ 
     justify-content: center;
     align-items: center;
     display: flex;
     font-size: 18px;
+    cursor: pointer;
+    flex-grow: 1;
+
+`
+
+const ContainerUI = styled.div`
+
+width: 80vw;
+display: flex;
+justify-content: space-between;
 
 `
 
@@ -146,12 +148,14 @@ const UnselectedTab = styled.div `
     color: ${colors.green};
     background-color: white;
     height: 60px;
-    width: 300px;
+    
     border: 1px ${colors.green} solid;
     justify-content: center;
     align-items: center;
     display: flex;
     font-size: 18px;
+    cursor: pointer;
+    flex-grow: 1;
 
 `
 
@@ -202,7 +206,11 @@ const [fontSize, setFontSize] = useState(font.sizes[0])
                 <Title>
                     Typography
                 </Title>
+
+
+
             </Content>
+
             <Tabs>
             <SelectedTab onClick={() => setFont(fontOne)} style={{
             background: font.key == 1 ? colors.green : "white",
@@ -217,7 +225,11 @@ const [fontSize, setFontSize] = useState(font.sizes[0])
             color: font.key == 3 ? "white" : colors.green}}>
                 Open Sans</UnselectedTab>
             </Tabs>
+
+
             <Greenback>
+              <ContainerUI>
+
                 <Lefttext>
                     <Montfont style = {{fontFamily: font.key == 1 ? "'Montserrat Alternates', sans-serif" : font.key == 2 ? "'Nunito', sans-serif" : "'Open Sans', sans-serif"}}>
                         {font.title}
@@ -233,15 +245,16 @@ const [fontSize, setFontSize] = useState(font.sizes[0])
                     </Smallpara>
                 </Lefttext>
                 <Righttext>
-                    <Sizebox1 onClick={() => setFontSize(font.sizes[0])} style={{
-                    background: fontSize == font.sizes[0] ? colors.green : "white",
-                    color: fontSize == font.sizes[0] ? "white" : colors.green}}>
-                        {font.textsize1}</Sizebox1>
-                    <Sizebox2 onClick={() => setFontSize(font.sizes[1])} style={{
-                    background: fontSize == font.sizes[1] ? colors.green : "white",
-                    color: fontSize == font.sizes[1] ? "white" : colors.green}}>
-                        {font.textsize2}</Sizebox2>
+                    <Sizebox onClick={() => setFontSize(font.sizes[0])} style={{
+                    background: fontSize == font.sizes[0] ? "white" : colors.green,
+                    color: fontSize == font.sizes[0] ? colors.green : "white"}}>
+                        {font.textsize1}</Sizebox>
+                    <Sizebox onClick={() => setFontSize(font.sizes[1])} style={{
+                    background: fontSize == font.sizes[1] ? "white" : colors.green,
+                    color: fontSize == font.sizes[1] ? colors.green : "white"}}>
+                        {font.textsize2}</Sizebox>
                 </Righttext>
+                </ContainerUI>
 
             </Greenback>
 

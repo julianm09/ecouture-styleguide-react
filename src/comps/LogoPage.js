@@ -7,22 +7,25 @@ import React, { useState } from 'react';
 const Container = styled.div`
 
     width: 100vw;
-    height: 100vh;
+
     display: flex;
     align-items: center;
     transition: 0.2s ease;
     justify-content: center;
+    
 `;
 
 const Content = styled.div`
 
     width: 80vw;
-    height: 100vh;
+
     display: flex;
     align-items: left;
     justify-content: center;
     font-family: nunito, sans-serif;
     position: relative;
+    background: green;
+
 
     flex-direction: column;
 `;
