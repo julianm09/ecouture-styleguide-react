@@ -92,6 +92,7 @@ const ButtonContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    
 `;
 
 const ButtonUI = styled.div`
@@ -101,6 +102,8 @@ const ButtonUI = styled.div`
     border-radius: 50px;
     background: white;
     margin: 0 25px;
+    transition: 0.5s;
+    cursor: pointer;
 `;
 
 const ImageContainer = styled.div`
@@ -128,23 +131,24 @@ export const LogoPage = () => {
                     <InformationContainer>
                         <LogoTitle>Wordmark</LogoTitle>
                         <LogoParagraph>
-                            Our wordmark is comprised of two key elements. First the name “ecouture” spelt in all lower case letters in the sans serif font “Montserrat Alternates”. Second it features our earth icon in place of the “o” in “ecouture” The color version of the wordmark uses #51B27E.
+                            Our wordmark is comprised of two key elements. First the name “ecouture” spelt in all lower-case letters in the sans serif font “Montserrat Alternates”. Second it features our earth icon in place of the “o” in “ecouture” The color version of the wordmark uses #51B27E.
                             </LogoParagraph>
                     </InformationContainer>
 
                     <LogoContainer>
                         <ImageContainer>
                             {logoOne ? (
-                                <img width="250px" src="/wordmark-color.png"></img>
-                            ) : (
                                 <img width="250px" src="/wordmark-bw.png"></img>
+                            ) : (
+                                <img width="250px" src="/wordmark-color.png"></img>
                             )}
                         </ImageContainer>
 
                         <ButtonContainer>
-                            <ButtonUI onClick={() => setLogoOne(true)} style={{ background: logoOne ? 'black' : 'green' }}></ButtonUI>
-                            <ButtonUI onClick={() => setLogoOne(false)} style={{ background: logoOne ? 'green' : 'black' }}></ButtonUI>
+                            <ButtonUI onClick={() => setLogoOne(true)} style={{ background: logoOne ? 'black' : 'white', border: logoOne ? 'none' : '1px solid black', }}></ButtonUI>
+                            <ButtonUI onClick={() => setLogoOne(false)} style={{ background: logoOne ? 'white' : '#51B27E', border: logoOne ? '1px solid #51B27E' : 'none' }}></ButtonUI>
                         </ButtonContainer>
+
                     </LogoContainer>
                 </ContentContainer>
 
@@ -152,45 +156,45 @@ export const LogoPage = () => {
                     <InformationContainer>
                         <LogoTitle>Combination Mark</LogoTitle>
                         <LogoParagraph>
-                            Our combination mark repeats the ecouture name three times to form a circle similar to that of the recycling logo. This is done to express the value ecouture puts in “Reduce, Reuse, Recyle”. The ecouture name is spelt in all lowercase letters and uses the sans serif font “Montserrat Alternates”  In the center is the earth icon.
+                            Our combination mark repeats the ecouture name three times to form a circle similar to that of the recycling logo. This is done to express the value ecouture puts in “Reduce, Reuse, Recycle”. The ecouture name is spelt in all lowercase letters and uses the sans serif font “Montserrat Alternates” In the center is the earth icon.
                             </LogoParagraph>
                     </InformationContainer>
 
                     <LogoContainer>
                         <ImageContainer>
                             {logoTwo ? (
-                                <img width="150px" src="/combination-color.png"></img>
+                                <img width="175px" src="/combination-bw.png"></img>
                             ) : (
-                                <img width="150px" src="/combination-bw.png"></img>
+                                <img width="175px" src="/combination-color.png"></img>
                             )}
                         </ImageContainer>
 
                         <ButtonContainer>
-                            <ButtonUI onClick={() => setLogoTwo(true)} style={{ background: logoOne ? 'black' : 'green' }}></ButtonUI>
-                            <ButtonUI onClick={() => setLogoOne(false)} style={{ background: logoOne ? 'green' : 'black' }}></ButtonUI>
+                            <ButtonUI onClick={() => setLogoTwo(true)} style={{ background: logoTwo ? 'black' : 'white', border: logoTwo ? 'none' : '1px solid black', }}></ButtonUI>
+                            <ButtonUI onClick={() => setLogoTwo(false)} style={{ background: logoTwo ? 'white' : '#51B27E', border: logoTwo ? '1px solid #51B27E' : 'none' }}></ButtonUI>
                         </ButtonContainer>
                     </LogoContainer>
                 </ContentContainer>
 
                 <ContentContainer>
                     <InformationContainer>
-                        <LogoTitle>Pictoral Mark</LogoTitle>
+                        <LogoTitle>Pictorial Mark</LogoTitle>
                         <LogoParagraph>
-                            Our pictoral mark is the most simple of our logo variations. It consists of a single icon of the earth. The icon uses #1D498B for the water and #3D7E5C for the land to give contrast to the lighter greens and blues used throughout our styling.
+                            Our pictoral mark is the simplest of our logo variations. It consists of a single icon of the earth. The icon uses #1D498B for the water and #3D7E5C for the land to give contrast to the lighter greens and blues used throughout our styling.
                             </LogoParagraph>
                     </InformationContainer>
 
                     <LogoContainer>
                         <ImageContainer>
                             {logoThree ? (
-                                <img width="125px" src="/earth.png"></img>
-                            ) : (
                                 <img width="125px" src="/earth.gif"></img>
+                            ) : (
+                                <img width="125px" src="/earth.png"></img>
                             )}
                         </ImageContainer>
 
                         <ButtonContainer>
-                            <div onClick={() => setLogoThree(!logoThree)}>{logoThree ? "Spin!" : "Stop"}</div>
+                            <ButtonUI onClick={() => setLogoThree(!logoThree)}>{logoThree ? "Stop" : "Spin!"}</ButtonUI>
                         </ButtonContainer>
                     </LogoContainer>
                 </ContentContainer>
