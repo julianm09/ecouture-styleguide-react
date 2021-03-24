@@ -191,7 +191,7 @@ const ColorDesc = styled.div
 
 export const ColorPage = () => {
 
-    const [color, setColor] = useState('cyan')
+    const [color, setColor] = useState(colors.cyan)
 
 
     return (

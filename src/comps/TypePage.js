@@ -70,15 +70,22 @@ const Smalltext = styled.h4`
 
     font-family: 'Montserrat Alternates', sans-serif;
     color: white;
-    margin-top: 5px
+    margin-top: 24px;
 
 `
 const Smallpara = styled.div`
 
+
     font-family: 'Montserrat Alternates', sans-serif;
     color: white;
-    margin-top: 140px;
+
     width: 50vw;
+
+    padding: 100px 0 0 0;
+
+    @media ${device.tablet}{
+      padding: 0;
+    }
 `
 
 const Lefttext = styled.div`
@@ -106,6 +113,17 @@ const Sizebox = styled.div`
 
 
 const Righttext = styled.div`
+@media ${device.tablet}{
+display: none;
+}
+`
+
+const RighttextMobile = styled.div`
+display: none;
+@media ${device.tablet}{
+display: flex;
+margin: 100px 0;
+}
 `
 
 const Break = styled.br`
@@ -130,7 +148,8 @@ const SelectedTab = styled.div`
     display: flex;
     font-size: 18px;
     cursor: pointer;
-    flex-grow: 1;
+    width: 34%;
+    text-align: center;
 
 `
 
@@ -155,7 +174,7 @@ const UnselectedTab = styled.div `
     display: flex;
     font-size: 18px;
     cursor: pointer;
-    flex-grow: 1;
+    width: 34%;
 
 `
 
@@ -237,6 +256,16 @@ const [fontSize, setFontSize] = useState(font.sizes[0])
                     <Smalltext style = {{fontFamily: font.key == 1 ? "'Montserrat Alternates', sans-serif" : font.key == 2 ? "'Nunito', sans-serif" : "'Open Sans', sans-serif"}}>
                         {font.title2}
                     </Smalltext>
+                    <RighttextMobile>
+                    <Sizebox onClick={() => setFontSize(font.sizes[0])} style={{
+                    background: fontSize == font.sizes[0] ? "white" : colors.green,
+                    color: fontSize == font.sizes[0] ? colors.green : "white"}}>
+                        {font.textsize1}</Sizebox>
+                    <Sizebox onClick={() => setFontSize(font.sizes[1])} style={{
+                    background: fontSize == font.sizes[1] ? "white" : colors.green,
+                    color: fontSize == font.sizes[1] ? colors.green : "white"}}>
+                        {font.textsize2}</Sizebox>
+                </RighttextMobile>
                     <Smallpara style = {{fontSize:fontSize, fontFamily: font.key == 1 ? "'Montserrat Alternates', sans-serif" : font.key == 2 ? "'Nunito', sans-serif" : "'Open Sans', sans-serif"}}>
                         {font.paragraph}
                         <Break></Break>

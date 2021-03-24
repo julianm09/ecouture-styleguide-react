@@ -3,6 +3,7 @@ import { colors } from './Colors';
 import { device } from './Sizes';
 import { LogoRound } from './LogoRound';
 import React, { useState } from 'react';
+import { IconographyPage } from './IconographyPage'
 
 const Container = styled.div`
 
@@ -110,6 +111,8 @@ export const ImageryPage = () => {
        
 
         </Square>
+
+        
 
         </BoxContainer>
 

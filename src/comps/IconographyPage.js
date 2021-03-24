@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { colors } from './Colors';
 import { device } from './Sizes';
 import { LogoRound } from './LogoRound';
+
 import React, { useState } from 'react';
 
 const Container = styled.div`
 
     width: 100vw;
-    height: 100vh;
     display: flex;
     align-items: center;
     transition: 0.5s ease;
@@ -19,12 +19,12 @@ const Container = styled.div`
 const Content = styled.div`
 
     width: 80vw;
-    height: 100vh;
     display: flex;
     align-items: left;
     justify-content: center;
     font-family: nunito, sans-serif;
     position: relative;
+    flex-direction: column;
 
 
 
@@ -36,9 +36,8 @@ const Title = styled.div`
     font-size: 24px;
     font-weight: 700;
     color: ${colors.blue};
-    position: absolute;
-    left: 0;
-    top: 200px;
+    padding: 100px 0 ;
+
     
 
 
@@ -50,9 +49,7 @@ const Icon = styled.div`
     width: 100px;
     border-radius: 7px;
     background-color: #FFFFFF;
-    box-shadow: 0 4px 4px 2px rgba(0,0,0,0.4);
-    margin-left: 2vw;
-    margin-right: 2vw;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,13 +61,11 @@ const Icon = styled.div`
 const BoxContainer = styled.div`
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: no-wrap;
-    width: 100vw;
-    position: relative;
-    bottom: -100px;
- 
+    flex-wrap: wrap;
+    width: 100%;
+
     
 
 `
@@ -84,9 +79,7 @@ export const IconographyPage = () => {
         <Container>
 
             <Content>
-            <Title>
-                Iconography
-            </Title>
+
 
         <BoxContainer>
 

@@ -15,6 +15,8 @@ import React, { useState, useEffect } from 'react'
 
 function App() {
 
+
+
   const [logoPosition, setLogoPosition] = useState('hero');
   const [logoPositionInner, setLogoPositionInner] = useState('hero-round');
 
@@ -66,6 +68,12 @@ function App() {
   
   return (
     <div style={{background: scrollColor, transition: '0.5s ease'}}>
+
+    <audio id="music">
+      <source src='../public/ecouture-typebeat.mp3' type="audio/mpeg"></source>
+    </audio>
+
+    <div style={{zIndex:'500'}}>music</div>
 
 
       <MobileMenu mobileMenu={mobileMenu} setMobilemenu={setMobilemenu}></MobileMenu>

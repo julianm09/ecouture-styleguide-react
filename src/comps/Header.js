@@ -62,7 +62,6 @@ export const Header = ({ mobileMenu, setMobilemenu }) => {
     <HeaderContainer style={{background : mobileMenu ? colors.blue : colors.green, filter : mobileMenu ? 'none': 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))' }}>
       <HeaderLinkContainer >
 
-
         <HeaderLinks>
           <a href='#logo'>logo</a>
           <a href='#type'>type</a>
