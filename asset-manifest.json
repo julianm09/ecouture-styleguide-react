@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ecouture-styleguide-react/static/css/main.91f502fb.chunk.css",
-    "main.js": "/ecouture-styleguide-react/static/js/main.ba7dbe6f.chunk.js",
-    "main.js.map": "/ecouture-styleguide-react/static/js/main.ba7dbe6f.chunk.js.map",
+    "main.js": "/ecouture-styleguide-react/static/js/main.20494dd9.chunk.js",
+    "main.js.map": "/ecouture-styleguide-react/static/js/main.20494dd9.chunk.js.map",
     "runtime-main.js": "/ecouture-styleguide-react/static/js/runtime-main.8c0db60e.js",
     "runtime-main.js.map": "/ecouture-styleguide-react/static/js/runtime-main.8c0db60e.js.map",
     "static/js/2.855d78e1.chunk.js": "/ecouture-styleguide-react/static/js/2.855d78e1.chunk.js",
@@ -10,13 +10,25 @@
     "index.html": "/ecouture-styleguide-react/index.html",
     "static/css/main.91f502fb.chunk.css.map": "/ecouture-styleguide-react/static/css/main.91f502fb.chunk.css.map",
     "static/js/2.855d78e1.chunk.js.LICENSE.txt": "/ecouture-styleguide-react/static/js/2.855d78e1.chunk.js.LICENSE.txt",
+    "static/media/ad-1.61591429.png": "/ecouture-styleguide-react/static/media/ad-1.61591429.png",
+    "static/media/ad-2.f8e43e2b.png": "/ecouture-styleguide-react/static/media/ad-2.f8e43e2b.png",
+    "static/media/ad-3.5ec44277.png": "/ecouture-styleguide-react/static/media/ad-3.5ec44277.png",
+    "static/media/ad-4.14cf3959.png": "/ecouture-styleguide-react/static/media/ad-4.14cf3959.png",
+    "static/media/animal-btn.f9cdce7f.svg": "/ecouture-styleguide-react/static/media/animal-btn.f9cdce7f.svg",
+    "static/media/combination-bw.7756816b.png": "/ecouture-styleguide-react/static/media/combination-bw.7756816b.png",
+    "static/media/combination-color.8ca10db5.png": "/ecouture-styleguide-react/static/media/combination-color.8ca10db5.png",
+    "static/media/cotton-btn.3f97b6e7.svg": "/ecouture-styleguide-react/static/media/cotton-btn.3f97b6e7.svg",
     "static/media/earth.7850d622.png": "/ecouture-styleguide-react/static/media/earth.7850d622.png",
-    "static/media/logo-round.1a4b67d2.svg": "/ecouture-styleguide-react/static/media/logo-round.1a4b67d2.svg"
+    "static/media/earth.ce3a935e.gif": "/ecouture-styleguide-react/static/media/earth.ce3a935e.gif",
+    "static/media/logo-round.1a4b67d2.svg": "/ecouture-styleguide-react/static/media/logo-round.1a4b67d2.svg",
+    "static/media/plant-btn.2c686f2e.svg": "/ecouture-styleguide-react/static/media/plant-btn.2c686f2e.svg",
+    "static/media/synthetic-btn.f3e6e2ef.svg": "/ecouture-styleguide-react/static/media/synthetic-btn.f3e6e2ef.svg",
+    "static/media/wordmark-color.f7ab2d0f.png": "/ecouture-styleguide-react/static/media/wordmark-color.f7ab2d0f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8c0db60e.js",
     "static/js/2.855d78e1.chunk.js",
     "static/css/main.91f502fb.chunk.css",
-    "static/js/main.ba7dbe6f.chunk.js"
+    "static/js/main.20494dd9.chunk.js"
   ]
 }
