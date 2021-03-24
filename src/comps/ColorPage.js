@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 const Container = styled.div`
 
     width: 100vw;
-    height: 82vh;
+  
     display: flex;
     align-items: center;
     transition: 0.5s ease;
@@ -19,13 +19,14 @@ const Container = styled.div`
 const Content = styled.div`
 
     width: 80vw;
-    height: 100vh;
+  
     display: flex;
     align-items: left;
     justify-content: center;
     font-family: nunito, sans-serif;
-    padding: 200px 0 0 0;
+    padding: 100px 0 ;
     position: relative;
+    flex-direction: column;
 
 
 
@@ -37,36 +38,41 @@ const Title = styled.div`
     font-size: 24px;
     font-weight: 700;
     color: white;
-    position: absolute;
-    left: 0;
-    top: 200px;
-    margin-top: 50px;
+
+    margin: 100px 0;
     
 
 
 `
 const ColorContainer = styled.div
 `
-    height: 100vh;
-    width: 100vw;
+  
+    
 
     display: flex;
     align-items: center;
+    
+    justify-content: space-between;
     flex-direction: column;
+  
 `
 
 const ColorBoxes = styled.div
 `
 
     display: flex;
-    width: 100%;
-    height: 40%;
     background-color: none;
+    width: 80vw;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 0 0 100px 0;
     
 
 `
+
+
+
 const ColorText = styled.div
 `
     display: flex;
@@ -203,12 +209,14 @@ export const ColorPage = () => {
             
             <ColorContainer>
                 <ColorBoxes>
+  
                     <CyanBox style={{border: color == colors.cyan ? '1px solid white' : 'none'}} onClick={() => setColor(colors.cyan)}></CyanBox>
-                    <PurpleBox onClick={() => setColor(colors.purple)}></PurpleBox>
-                    <BlueBox onClick={() => setColor(colors.blue)}></BlueBox>
-                    <OrangeBox onClick={() => setColor(colors.orange)}></OrangeBox>
-                    <BlackBox onClick={() => setColor(colors.black)}></BlackBox>
-                    <GreenBox onClick={() => setColor(colors.green)}></GreenBox>
+                    <PurpleBox style={{border: color == colors.purple ? '1px solid white' : 'none'}} onClick={() => setColor(colors.purple)}></PurpleBox>
+                    <BlueBox style={{border: color == colors.blue ? '1px solid white' : 'none'}} onClick={() => setColor(colors.blue)}></BlueBox>
+                    <OrangeBox style={{border: color == colors.orange ? '1px solid white' : 'none'}} onClick={() => setColor(colors.orange)}></OrangeBox>
+                    <BlackBox style={{border: color == colors.black ? '1px solid white' : 'none'}} onClick={() => setColor(colors.black)}></BlackBox>
+                    <GreenBox style={{border: color == colors.green ? '1px solid white' : 'none'}} onClick={() => setColor(colors.green)}></GreenBox>
+        
                 </ColorBoxes>
 
                 <ColorText>
