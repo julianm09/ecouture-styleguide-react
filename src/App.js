@@ -69,11 +69,7 @@ function App() {
   return (
     <div style={{background: scrollColor, transition: '0.5s ease'}}>
 
-    <audio id="music">
-      <source src='../public/ecouture-typebeat.mp3' type="audio/mpeg"></source>
-    </audio>
 
-    <div style={{zIndex:'500'}}>music</div>
 
 
       <MobileMenu mobileMenu={mobileMenu} setMobilemenu={setMobilemenu}></MobileMenu>
@@ -83,7 +79,6 @@ function App() {
       <TypePage></TypePage>
       <ColorPage></ColorPage>
       <ImageryPage></ImageryPage>
-      <IconographyPage></IconographyPage>
       <FigmaPage></FigmaPage>
       <Footer></Footer>
 

@@ -9,6 +9,7 @@ const Container = styled.div`
 
     width: 100vw;
     display: flex;
+    
     align-items: center;
     transition: 0.2s ease;
     justify-content: center;
@@ -22,6 +23,7 @@ const Container = styled.div`
 const Content = styled.div`
 
     width: 80vw;
+    
 
     display: flex;
     align-items: left;
@@ -52,7 +54,8 @@ const Greenback = styled.div`
     align-items: flex-start;
     display: flex;
     flex-direction: row;
-    padding: 100px 0 ;
+    padding: 200px 0 ;
+    min-height: 100vh;
 
 
 `
@@ -208,14 +211,14 @@ const fontThree = {
     title2:'regular',
     textsize1:'18px',
     textsize2:'12px',
-    paragraph: 'Open Sans will be used for material information in 18px and 12xp.',
+    paragraph: 'Open Sans will be used for material information in 18px and 12px.',
     paragraph2: ' A classic font, compact legible and perfect for larger bodies of text.',
     sizes:['18px', '12px'],
 }
 
 
 const [font, setFont] = useState(fontOne)
-const [fontSize, setFontSize] = useState(font.sizes[0])
+const [fontSize, setFontSize] = useState(font.sizes[1])
 
     return (
 
@@ -231,7 +234,9 @@ const [fontSize, setFontSize] = useState(font.sizes[0])
             </Content>
 
             <Tabs>
-            <SelectedTab onClick={() => setFont(fontOne)} style={{
+            <SelectedTab onClick={() => {
+              setFont(fontOne)
+            }} style={{
             background: font.key == 1 ? colors.green : "white",
             color: font.key == 1 ? "white" : colors.green}}>
                 Montserrat Alternates</SelectedTab>

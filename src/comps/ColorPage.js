@@ -27,6 +27,7 @@ const Content = styled.div`
     padding: 100px 0 ;
     position: relative;
     flex-direction: column;
+    padding: 0 0 200px 0;
 
 
 
@@ -67,6 +68,11 @@ const ColorBoxes = styled.div
     align-items: center;
     flex-wrap: wrap;
     padding: 0 0 100px 0;
+
+    @media ${device.tablet}{
+        width: 80vw;
+
+    }
     
 
 `
@@ -89,6 +95,13 @@ const CyanBox = styled.div
     height: 100px;
     background-color: ${colors.cyan};
     border-radius: 10px;
+
+    @media ${device.tablet}{
+        width: 25vw;
+        height: 25vw;
+        margin: 0 0 25px 0;
+
+    }
 `
 
 const PurpleBox = styled.div
@@ -98,6 +111,13 @@ const PurpleBox = styled.div
     height: 100px;
     background-color: ${colors.purple};
     border-radius: 10px;
+
+    @media ${device.tablet}{
+        width: 25vw;
+        height: 25vw;
+        margin: 0 0 25px 0;
+
+    }
 `
 
 const BlueBox = styled.div
@@ -107,6 +127,13 @@ const BlueBox = styled.div
     height: 100px;
     background-color: ${colors.blue};
     border-radius: 10px;
+
+    @media ${device.tablet}{
+        width: 25vw;
+        height: 25vw;
+        margin: 0 0 25px 0;
+
+    }
 `
 const OrangeBox = styled.div
 `
@@ -115,6 +142,12 @@ const OrangeBox = styled.div
     height: 100px;
     background-color: ${colors.orange};
     border-radius: 10px;
+
+    @media ${device.tablet}{
+        width: 25vw;
+        height: 25vw;
+
+    }
 `
 const BlackBox = styled.div
 `
@@ -123,6 +156,12 @@ const BlackBox = styled.div
     height: 100px;
     background-color: ${colors.black};
     border-radius: 10px;
+
+    @media ${device.tablet}{
+        width: 25vw;
+        height: 25vw;
+
+    }
 `
 
 const GreenBox = styled.div
@@ -132,6 +171,12 @@ const GreenBox = styled.div
     height: 100px;
     background-color: ${colors.green};
     border-radius: 10px;
+
+    @media ${device.tablet}{
+        width: 25vw;
+        height: 25vw;
+
+    }
 `
 
 const CyanTextBox = styled.div

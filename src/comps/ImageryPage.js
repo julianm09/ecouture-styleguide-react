@@ -22,10 +22,11 @@ const Content = styled.div`
     width: 80vw;
     display: flex;
     align-items: left;
-    justify-content: center;
+    justify-content: space-between;
     font-family: nunito, sans-serif;
-    padding: 300px 0 0 0;
+    padding: 100px 0 0 0;
     position: relative;
+    flex-direction: column;
 
 
 
@@ -39,9 +40,7 @@ const Title = styled.div`
     font-size: 24px;
     font-weight: 700;
     color: ${colors.blue};
-    position: absolute;
-    left: 0;
-    top: 200px;
+
     
     
 
@@ -65,6 +64,23 @@ const Square = styled.img`
     }
 `
 
+const SquareDiv = styled.div`
+
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+
+
+    @media ${device.tablet}{
+        width: 80vw;
+    
+
+    }
+`
+
 const BoxContainer = styled.div`
 
 
@@ -73,9 +89,26 @@ const BoxContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin: 0 0 100px 0;
 
    
 `
+
+const Icon = styled.div`
+
+    height: 100px;
+    width: 100px;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+`
+
 
 export const ImageryPage = () => {
 
@@ -111,6 +144,59 @@ export const ImageryPage = () => {
        
 
         </Square>
+
+        </BoxContainer>
+        
+
+        <Title>
+                Icons
+            </Title>
+
+            <BoxContainer>
+
+        <SquareDiv>
+
+        <Icon>
+        <img src='/cotton-btn.svg'></img>
+        <strong style={{color: colors.cyan}}>Cotton</strong>
+        </Icon>
+
+            
+
+
+        </SquareDiv>
+
+        <SquareDiv>
+
+        <Icon>
+        <img src='/plant-btn.svg'></img>
+        <strong style={{color: colors.green}}>Plant</strong>
+        </Icon>
+
+            
+        </SquareDiv>
+
+        <SquareDiv>
+
+        <Icon>
+        <img src='/animal-btn.svg'></img>
+        <strong style={{color: colors.orange}}>Animal</strong>
+        </Icon>
+
+                    
+        </SquareDiv>
+
+        <SquareDiv>
+
+
+        <Icon>
+        <img src='/synthetic-btn.svg'></img>
+        <strong style={{color: colors.purple}}>Synthetic</strong>
+        </Icon>
+
+
+                    
+        </SquareDiv>
 
         
 

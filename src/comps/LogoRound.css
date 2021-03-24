@@ -13,12 +13,14 @@
     width: 200px;
     transition: 0.2s ease;
     animation: 10s spin linear infinite;
+
 }
 
 .hero-round{
     position: absolute;
     width: 100px;
     transition: 0.2s ease;
+    
 }
 
 

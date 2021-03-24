@@ -59,12 +59,14 @@ const Icon = styled.div`
 `
 
 const BoxContainer = styled.div`
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
+    width: 80vw;
+    background: red;
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 50px;
+    
+    
 
     
 

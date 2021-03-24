@@ -23,7 +23,7 @@ export const LogoRound = ({ logoPosition, logoPositionInner }) => {
 
     return (
         <>
-        <a href="#top"></a>
+        <a style={{position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center'}} href="#top">
             <img
             className={logoPosition}
 
@@ -33,7 +33,7 @@ export const LogoRound = ({ logoPosition, logoPositionInner }) => {
     
             src='/earth.png'/>
 
-
+        </a>
 
         </>
         

@@ -12,6 +12,7 @@ const Container = styled.div`
   align-items: center;
   transition: 0.2s ease;
   justify-content: center;
+  padding: 100px 0;
 
 `;
 
@@ -50,7 +51,7 @@ const InformationContainer = styled.div`
 
 const LogoContainer = styled.div`
 
-    width: 50%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -74,6 +75,8 @@ const ContentContainer = styled.div`
 
     width: 100%;
     display: flex;
+    justify-content: space-between;
+    padding: 0 0 50px 0;
 
 
     @media ${device.tablet}{
@@ -85,7 +88,7 @@ const ContentContainer = styled.div`
 const LogoParagraph = styled.div`
 
     color: black;
-    font-size: 12px;
+    font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     margin: 50px 0 100px 0;
     
@@ -94,10 +97,19 @@ const LogoParagraph = styled.div`
 const ButtonContainer = styled.div`
 
     width: 100%;
-    height: 100px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    top: -100px;
+
+    @media ${device.tablet}{
+
+        top: 50px;
+        margin: 0 0 50px 0;
+
+    }
     
 `;
 
